@@ -1,0 +1,18 @@
+{{ 'image-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="image-banner">
+  <div>
+    <h2>Message Text Here</h2>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image banner",
+  "presets": [
+    {
+      "name": "Image banner"
+    }
+  ]
+}
+{% endschema %}

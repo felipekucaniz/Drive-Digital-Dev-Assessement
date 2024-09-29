@@ -1,0 +1,29 @@
+{% assign product = section.settings.product %}
+<div class="page-width">
+  <h2>Featured Product Here</h2>
+
+  {% if product != blank %}
+    <h4>{{ product.title }}</h4>
+    {{ product.description }}
+  {% endif %}
+
+  {% render 'product-more-info' %}
+</div>
+
+{% schema %}
+{
+  "name": "Featured product",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured product"
+    }
+  ]
+}
+{% endschema %}

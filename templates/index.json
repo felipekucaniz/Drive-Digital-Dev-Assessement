@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "settings": {
+      }
+    },
+    "featured_product_9bnXxD": {
+      "type": "featured-product",
+      "settings": {
+        "product": ""
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_product_9bnXxD"
+  ]
+}
