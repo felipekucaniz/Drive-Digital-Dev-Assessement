@@ -42,7 +42,7 @@
         "image_overlay_opacity": 50
       }
     },
-    "featured_product_9bnXxD": {
+    "featured_product": {
       "type": "featured-product",
       "settings": {
         "product": "short-sleeve-t-shirt"
@@ -51,6 +51,6 @@
   },
   "order": [
     "image_banner",
-    "featured_product_9bnXxD"
+    "featured_product"
   ]
 }
