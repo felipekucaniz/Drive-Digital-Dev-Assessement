@@ -11,9 +11,10 @@
   "current": {
     "logo": "shopify://shop_images/shopify_logo_whitebg.svg",
     "logo_width": 160,
-    "type_header_font": "assistant_n4",
+    "favicon": "shopify://shop_images/shopify_glyph.svg",
+    "type_header_font": "poppins_n4",
     "heading_scale": 100,
-    "type_body_font": "assistant_n4",
+    "type_body_font": "montserrat_n4",
     "body_scale": 100,
     "currency_code_enabled": true,
     "color_schemes": {
