@@ -15,13 +15,13 @@
         {% comment %} Product Price {% endcomment %}
         <div class="featured-product-price">
           {%- if current_variant.compare_at_price -%}
-            <span class="price-tag">{{ current_variant.price | money }}</span>
+            <span id="price-tag" class="price-tag">{{ current_variant.price | money }}</span>
             <s class="compare-to-price">{{ current_variant.compare_at_price | money }}</s>
             <small class="save-discount"
               >save: {{ current_variant.compare_at_price | minus: current_variant.price | money -}}
             </small>
           {%- else -%}
-            <span class="price-tag">{{ current_variant.price | money }}</span>
+            <span id="price-tag" class="price-tag">{{ current_variant.price | money }}</span>
           {%- endif -%}
           {%- unless current_variant.available -%}
             <span class="price-soldout">sold out</span>
@@ -57,6 +57,7 @@
               {% for variant in product.variants %}
                 <option
                   value="{{ variant.id }}"
+                  data-price="{{ variant.price | money }}"
                   {% if variant == current_variant %}
                     selected="selected"
                   {% endif %}
@@ -115,6 +116,8 @@
       return data;
     });
 </script>
+{% comment %} Scripts {% endcomment %}
+<script src="{{ 'featured-product.js' | asset_url }}" defer></script>
 
 {% schema %}
 {

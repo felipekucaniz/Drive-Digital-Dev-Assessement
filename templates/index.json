@@ -46,10 +46,10 @@
       "type": "featured-product",
       "settings": {
         // "product": "short-sleeve-t-shirt"
-        // "product": "the-complete-snowboard"
+        "product": "the-complete-snowboard"
         // "product": "the-compare-at-price-snowboard"
         // "product": "the-out-of-stock-snowboard"
-        "product": "the-collection-snowboard-oxygen"
+        // "product": "the-collection-snowboard-oxygen"
       }
     }
   },
