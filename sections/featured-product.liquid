@@ -53,7 +53,7 @@
         -%}
           {% comment %} Product Variations {% endcomment %}
           {%- unless product.has_only_default_variant -%}
-            <select name="id" class="variant-select">
+            <select name="id" class="featured-product-form-input">
               {% for variant in product.variants %}
                 <option
                   value="{{ variant.id }}"
@@ -69,7 +69,7 @@
             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
           {%- endunless -%}
           {% comment %} Product Quantity {% endcomment %}
-          <input type="hidden" name="quantity" value="1">
+          <input type="number" increment="1" name="quantity" value="1" class="featured-product-form-input">
           {% comment %} Product Buy Button {% endcomment %}
           <button
             type="submit"
@@ -84,7 +84,18 @@
             {%- if product.selected_or_first_available_variant.available == false -%}
               Sold Out
             {%- else -%}
-              Add to Cart
+              {% comment %} {%- assign added_to_cart = false -%} {% endcomment %}
+              {%- for cart_item in cart.items -%}
+                {%- if cart_item.id == product.selected_or_first_available_variant.id -%}
+                  {%- assign added_to_cart = true -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- if added_to_cart -%}
+                Added to Cart
+              {%- else -%}
+                Add to Cart
+              {%- endif -%}
             {%- endif -%}
           </button>
         {%- endform -%}
@@ -96,10 +107,13 @@
   {% render 'product-more-info' %}
 </div>
 
-<script>
-  function clearCart() {
-    Shopify.clear();
-  }
+{% comment %} Testing var to check cart contents in the console {% endcomment %}
+<script defer>
+  var cartContents = fetch(window.Shopify.routes.root + 'cart.js')
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    });
 </script>
 
 {% schema %}
