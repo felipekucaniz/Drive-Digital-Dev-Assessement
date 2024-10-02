@@ -1,0 +1,146 @@
+.featured-product {
+  width: 100%;
+  padding: 8rem 0rem;
+  display: flex;
+  gap: 20px;
+}
+
+.featured-product-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.featured-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.featured-product-title {
+  color: #000;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.variant-select {
+  padding: 1rem;
+  border-radius: 4px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.featured-product-price {
+  display: flex;
+  align-items: baseline;
+  gap: 11px;
+}
+
+.price-tag {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.compare-to-price {
+  color: #d9d9d9;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.save-discount {
+  color: #c6474b;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.price-soldout {
+  background-color: #d9d9d9;
+  border-radius: 999px;
+  padding: 2px 16px;
+  color: #505050;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.featured-product-description {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.7px;
+}
+
+.featured-product-tags {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  /* display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 16px; */
+}
+
+.featured-product-tag-separator:first-child {
+  display: none;
+}
+
+.featured-product-tag-separator {
+  width: 6px;
+  height: 6px;
+  fill: #d9d9d9;
+}
+
+.featured-product-tag {
+  color: #818181;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.7px;
+}
+
+.button {
+  border-radius: 5px;
+  display: flex;
+  width: 236px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #c5474b;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+}

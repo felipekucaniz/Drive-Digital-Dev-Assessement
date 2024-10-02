@@ -1,14 +1,105 @@
+{{ 'featured-product.css' | asset_url | stylesheet_tag }}
 {% assign product = section.settings.product %}
+{% assign current_variant = product.selected_or_first_available_variant %}
+
 <div class="page-width">
-  <h2>Featured Product Here</h2>
-
   {% if product != blank %}
-    <h4>{{ product.title }}</h4>
-    {{ product.description }}
+    <div class="featured-product">
+      {% comment %} Product Image {% endcomment %}
+      <img width="50%" height="" src="{{ product.featured_image | image_url}}" alt="{{product.featured_image.alt}}">
+      <div class="featured-product-content">
+        {% comment %} Product Title {% endcomment %}
+        <h2 class="featured-product-title">
+          {{ product.title | escape | upcase }}
+        </h2>
+        {% comment %} Product Price {% endcomment %}
+        <div class="featured-product-price">
+          {%- if current_variant.compare_at_price -%}
+            <span class="price-tag">{{ current_variant.price | money }}</span>
+            <s class="compare-to-price">{{ current_variant.compare_at_price | money }}</s>
+            <small class="save-discount"
+              >save: {{ current_variant.compare_at_price | minus: current_variant.price | money -}}
+            </small>
+          {%- else -%}
+            <span class="price-tag">{{ current_variant.price | money }}</span>
+          {%- endif -%}
+          {%- unless current_variant.available -%}
+            <span class="price-soldout">sold out</span>
+          {%- endunless -%}
+        </div>
+        {% comment %} Product Description {% endcomment %}
+        <p class="featured-product-description">{{ product.description | truncatewords: 55 }}</p>
+        {% comment %} Product Tags {% endcomment %}
+        <div class="featured-product-tags">
+          {%- for tag in product.tags -%}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="6px"
+              height="6px"
+              viewBox="0 0 6 6"
+              fill="none"
+              class="featured-product-tag-separator"
+            >
+              <circle cx="3" cy="3" r="3" fill="#D9D9D9"/>
+            </svg>
+            <span class="featured-product-tag">{{ tag }}</span>
+          {%- endfor -%}
+        </div>
+        {%- form 'product',
+          product,
+          class: 'featured-product-form',
+          novalidate: 'novalidate',
+          data-type: 'add-to-cart-form'
+        -%}
+          {% comment %} Product Variations {% endcomment %}
+          {%- unless product.has_only_default_variant -%}
+            <select name="id" class="variant-select">
+              {% for variant in product.variants %}
+                <option
+                  value="{{ variant.id }}"
+                  {% if variant == current_variant %}
+                    selected="selected"
+                  {% endif %}
+                >
+                  {{ variant.title }}
+                </option>
+              {% endfor %}
+            </select>
+          {%- else -%}
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          {%- endunless -%}
+          {% comment %} Product Quantity {% endcomment %}
+          {% comment %} Product Buy Button {% endcomment %}
+          <button
+            type="submit"
+            name="add"
+            class="button"
+            {% if product.selected_or_first_available_variant.available == false
+              or product.selected_or_first_available_variant == null
+            %}
+              disabled
+            {% endif %}
+          >
+            {%- if product.selected_or_first_available_variant.available == false -%}
+              Sold Out
+            {%- else -%}
+              Add to Cart
+            {%- endif -%}
+          </button>
+        {%- endform -%}
+      </div>
+    </div>
+  {% else %}
+    <h2>Invalid product</h2>
   {% endif %}
-
   {% render 'product-more-info' %}
 </div>
+
+<script>
+  function clearCart() {
+    Shopify.clear();
+  }
+</script>
 
 {% schema %}
 {
