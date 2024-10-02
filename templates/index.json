@@ -51,10 +51,15 @@
         // "product": "the-out-of-stock-snowboard"
         // "product": "the-collection-snowboard-oxygen"
       }
+    },
+    "product_more_info": {
+      "type": "product-more-info",
+      "settings": {}
     }
   },
   "order": [
     "image_banner",
-    "featured_product"
+    "featured_product",
+    "product_more_info"
   ]
 }
