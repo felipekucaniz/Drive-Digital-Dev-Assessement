@@ -45,16 +45,35 @@
     "featured_product": {
       "type": "featured-product",
       "settings": {
-        // "product": "short-sleeve-t-shirt"
         "product": "the-complete-snowboard"
-        // "product": "the-compare-at-price-snowboard"
-        // "product": "the-out-of-stock-snowboard"
-        // "product": "the-collection-snowboard-oxygen"
       }
     },
     "product_more_info": {
       "type": "product-more-info",
-      "settings": {}
+      "blocks": {
+        "collapsible_row_8xTJCN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "missing translation: \"t:sections.collapsible_content.blocks.collapsible_row.settings.heading.default\" is not present in any of the [\"en\"] schema locale files",
+            "row_content": ""
+          }
+        },
+        "collapsible_row_ckWTRi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "missing translation: \"t:sections.collapsible_content.blocks.collapsible_row.settings.heading.default\" is not present in any of the [\"en\"] schema locale files",
+            "row_content": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_8xTJCN",
+        "collapsible_row_ckWTRi"
+      ],
+      "settings": {
+        "heading": "Product information",
+        "open_first_collapsible_row": false
+      }
     }
   },
   "order": [
