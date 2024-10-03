@@ -1,0 +1,78 @@
+{% comment %} Using Collapsible Content section from DAWN theme {% endcomment %}
+{% comment %} Products with metafield assigned: the-complete-snowboard, the-compare-at-price-snowboard, the-out-of-stock-snowboard {% endcomment %}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="collapsible-content isolate content-container content-container--full-width">
+    <div class="collapsible-content__wrapper">
+      <div class="collapsible-content-wrapper-narrow">
+        <div class="collapsible-content__header" style="text-align: center;">
+          <h2 class="collapsible-content__heading inline-richtext h1">Product Information</h2>
+        </div>
+        <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid">
+          <div class="grid__item">
+            {% comment %} Row 1 {% endcomment %}
+            <div class="accordion">
+              <details id="Details-accordion-1" open>
+                <summary id="Summary-accordion-1">
+                  <h3 class="accordion__title inline-richtext h4">Product material</h3>
+                  <svg width="24px" height="24px" class="icon icon-caret" viewBox="0 0 10 6">
+                    <path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"/>
+                  </svg>
+                </summary>
+                <div
+                  class="accordion__content rte"
+                  id="CollapsibleAccordion-accordion-1"
+                  role="region"
+                  aria-labelledby="Summary-accordion-1"
+                >
+                  {{ product.metafields.drive_digital.product_material }}
+                </div>
+              </details>
+            </div>
+            {% comment %} Row 2 {% endcomment %}
+            <div class="accordion">
+              <details id="Details-accordion-1">
+                <summary id="Summary-accordion-1">
+                  <h3 class="accordion__title inline-richtext h4">Snowboard binding mount</h3>
+                  <svg width="24px" height="24px" class="icon icon-caret" viewBox="0 0 10 6">
+                    <path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"/>
+                  </svg>
+                </summary>
+                <div
+                  class="accordion__content rte"
+                  id="CollapsibleAccordion-accordion-1"
+                  role="region"
+                  aria-labelledby="Summary-accordion-1"
+                >
+                  {{ product.metafields.test_data.binding_mount }}
+                </div>
+              </details>
+            </div>
+            {% comment %} Row 3 {% endcomment %}
+            <div class="accordion">
+              <details id="Details-accordion-1">
+                <summary id="Summary-accordion-1">
+                  <h3 class="accordion__title inline-richtext h4">Snowboard length</h3>
+                  <svg width="24px" height="24px" class="icon icon-caret" viewBox="0 0 10 6">
+                    <path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"/>
+                  </svg>
+                </summary>
+                <div
+                  class="accordion__content rte"
+                  id="CollapsibleAccordion-accordion-1"
+                  role="region"
+                  aria-labelledby="Summary-accordion-1"
+                >
+                  {{ product.metafields.test_data.snowboard_length.value }}
+                  {{ product.metafields.test_data.snowboard_length.unit }}
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

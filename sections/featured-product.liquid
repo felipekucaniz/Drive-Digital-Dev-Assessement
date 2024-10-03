@@ -105,6 +105,7 @@
   {% else %}
     <h2>Invalid product</h2>
   {% endif %}
+  {%- render 'product-more-info', product: product -%}
 </div>
 
 {% comment %} Testing var to check cart contents in the console {% endcomment %}
