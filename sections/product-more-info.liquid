@@ -1,3 +1,5 @@
+{% comment %} Using Collapsible content section from DAWN theme {% endcomment %}
+{% comment %} Products with metafield assigned: the-complete-snowboard, the-compare-at-price-snowboard, the-out-of-stock-snowboard {% endcomment %}
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
 {{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
 
@@ -42,7 +44,7 @@
                     <h3 class="accordion__title inline-richtext h4">
                       {{ block.settings.heading | default: block.settings.page.title | escape }}
                     </h3>
-                    <svg class="icon icon-caret" viewBox="0 0 10 6">
+                    <svg width="24px" height="24px" class="icon icon-caret" viewBox="0 0 10 6">
                       <path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"/>
                     </svg>
                   </summary>
@@ -111,9 +113,6 @@
     {
       "name": "Product Information",
       "blocks": [
-        {
-          "type": "collapsible_row"
-        },
         {
           "type": "collapsible_row"
         },

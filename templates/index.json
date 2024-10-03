@@ -51,24 +51,32 @@
     "product_more_info": {
       "type": "product-more-info",
       "blocks": {
-        "collapsible_row_8xTJCN": {
+        "collapsible_row_0": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "missing translation: \"t:sections.collapsible_content.blocks.collapsible_row.settings.heading.default\" is not present in any of the [\"en\"] schema locale files",
-            "row_content": ""
+            "heading": "Row 1",
+            "row_content": "testing contente row 1"
           }
         },
-        "collapsible_row_ckWTRi": {
+        "collapsible_row_1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "missing translation: \"t:sections.collapsible_content.blocks.collapsible_row.settings.heading.default\" is not present in any of the [\"en\"] schema locale files",
-            "row_content": ""
+            "heading": "Row 2",
+            "row_content": "WE DESIGN, BUILD AND OPTIMISE EXCEPTIONAL ECOMMERCE WEBSITES"
+          }
+        },
+        "collapsible_row_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Row 3",
+            "row_content": "WE DESIGN, BUILD AND OPTIMISE EXCEPTIONAL ECOMMERCE WEBSITES"
           }
         }
       },
       "block_order": [
-        "collapsible_row_8xTJCN",
-        "collapsible_row_ckWTRi"
+        "collapsible_row_0",
+        "collapsible_row_1",
+        "collapsible_row_2"
       ],
       "settings": {
         "heading": "Product information",
