@@ -28,6 +28,9 @@
 }
 
 .featured-product-form-input {
+  /* all: unset; */
+  width: 300px;
+  border: 1px solid #d9d9d9;
   padding: 1rem;
   border-radius: 4px;
   color: #000;
@@ -127,6 +130,7 @@
 }
 
 .button {
+  border: 1px solid #c5474b;
   border-radius: 5px;
   display: flex;
   width: 236px;
