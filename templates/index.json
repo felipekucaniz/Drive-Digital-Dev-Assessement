@@ -79,8 +79,9 @@
         "collapsible_row_2"
       ],
       "settings": {
+        "product": "the-complete-snowboard",
         "heading": "Product information",
-        "open_first_collapsible_row": false
+        "open_first_collapsible_row": true
       }
     }
   },
