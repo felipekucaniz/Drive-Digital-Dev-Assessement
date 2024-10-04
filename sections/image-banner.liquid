@@ -2,12 +2,16 @@
 
 {%- style -%}
   #Banner-{{ section.id }} {
-    height: 471px;
+    height: 500px;
     width: 100%;
     position: relative;
-    background-image: url("{{ section.settings.image | image_url }}");
+    background-image: url("{{ section.settings.image_mobile | image_url }}");
     background-size: cover;
     background-position: center center;
+  }
+  @media only screen and (min-width: 640px) {
+    height: 471px;
+    background-image: url("{{ section.settings.image | image_url }}");
   }
   #Overlay-{{ section.id }} {
     content: '';
@@ -64,6 +68,11 @@
     {
       "type": "image_picker",
       "id": "image",
+      "label": "Background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
       "label": "Background image"
     },
     {
