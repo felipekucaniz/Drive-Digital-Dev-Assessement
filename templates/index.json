@@ -39,6 +39,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/photographer-working-at-his-desk.jpg",
+        "image_mobile": "shopify://shop_images/hands-hold-paint-items-over-a-pallet.jpg",
         "image_overlay_opacity": 50
       }
     },
