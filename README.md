@@ -13,9 +13,9 @@
 
 After finishing, kindly submit the following items through email:
 
-- Link to the Shopify preview
-- Preview access password
-- Link to your repository
+- Link to the Shopify preview = https://quickstart-2a6b05f1.myshopify.com/
+- Preview access password = ohltay
+- Link to your repository = https://github.com/felipekucaniz/Drive-Digital-Dev-Assessement.git
 
 ## Steps to Follow
 
@@ -47,6 +47,8 @@ After finishing, kindly submit the following items through email:
 - Structure the text elements as blocks to allow for rearrangement
 - Consider incorporating additional configurable features that might appeal to clients.
 
+- Image overlay added for readability
+
 ## Section 2 - Feature Product
 
 - A predefined schema exists within the section. Please update the code to display the following:
@@ -65,6 +67,9 @@ After finishing, kindly submit the following items through email:
 - Enable variant selection
 - Change the "add to cart" button to "Sold Out" when the product is unavailable.
 
+- Select input for variants
+- Quantity as a regular input type number
+
 ### Tip
 - You can clear your cart by visiting **/cart/clear**
 
@@ -72,6 +77,8 @@ After finishing, kindly submit the following items through email:
 
 - Create a metafield for the product material, noting that the material is unique to each product.
 - Delivery information should be set globally
+
+- Products with metafield assigned: the-complete-snowboard, the-compare-at-price-snowboard, the-out-of-stock-snowboard
 
 ### END
 
