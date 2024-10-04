@@ -7,32 +7,34 @@
 }
 
 .banner-blocks {
-  width: 352px;
-  height: 100%;
   display: flex;
-  padding: 10px;
+  height: 100%;
+  padding: 10px 38px;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
 }
 
 .banner-heading {
+  all: unset;
   color: #2bd896;
+  text-align: center;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
 .banner-text {
-  margin: 0px;
+  all: unset;
   color: #fff;
+  text-align: center;
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -40,20 +42,45 @@
 }
 
 .button {
-  border-radius: 5px;
   display: flex;
-  width: 236px;
+  width: 261px;
   padding: 10px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background-color: #c5474b;
+  border-radius: 5px;
+  background: #c6474b;
   color: #fff;
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+@media only screen and (min-width: 640px) {
+  .banner-blocks {
+    width: 352px;
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .banner-heading {
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+  }
+
+  .banner-text {
+    text-align: left;
+    margin: 0px;
+    font-size: 28px;
+  }
+
+  .button {
+    width: 236px;
+    font-size: 14px;
+  }
 }
