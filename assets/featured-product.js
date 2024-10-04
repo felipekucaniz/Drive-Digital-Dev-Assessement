@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (i = 0; i < data.items.length; i++) {
           if (data.items[i].id == variantSelector.value) {
             inCart = true;
+            break;
           }
         }
         if (inCart && document.querySelector("button[name='add']").innerText == 'ADD TO CART') {
