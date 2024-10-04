@@ -1,22 +1,24 @@
+# Shopify Developer Assessment
+
 Link to the Shopify preview = https://quickstart-2a6b05f1.myshopify.com/
 Preview access password = ohltay
 Link to your repository = https://github.com/felipekucaniz/Drive-Digital-Dev-Assessement.git
 
-##Section 1 - Hero:
+## Section 1 - Hero:
 2 different images for desktop and mobile
 Client configurable overlay for better text readability
 
-##Section 2 - Feature Product:
+## Section 2 - Feature Product:
 Quantity input and variant select included
 Native Shopify "Add to Cart" form
 Button text changes when product/variant is already in cart or sold out
 Product price changes when a variant change
 
-##Section 2.1 - Featured Product Information:
+## Section 2.1 - Featured Product Information:
 Product material metafield added to products
 Products with metafield assigned: the-complete-snowboard, the-compare-at-price-snowboard, the-out-of-stock-snowboard
 
-#Instructions for testing:
+# Instructions for testing:
 Run the following command in terminal (make sure you have Shopify CLI installed https://shopify.dev/docs/api/shopify-cli):
 shopify theme dev --store quickstart-2a6b05f1.myshopify.com
 When asked for password use the preview access password “ohltay”
@@ -37,8 +39,6 @@ Change product value in /templates/index.json to one of the following values: "t
 "the-compare-at-price-snowboard”: You can check the product price and discount
 
 "the-out-of-stock-snowboard”: You can check a sold out product
-
-# Shopify Developer Assessment
 
 ## Evaluation Criteria
 
