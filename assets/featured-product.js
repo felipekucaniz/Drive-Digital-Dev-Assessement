@@ -1,16 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
   var variantSelector = document.querySelector("select[name='id']");
   variantSelector.addEventListener('change', function () {
+    // Update DOM button text element whether item is in cart
     var cartContents = fetch(window.Shopify.routes.root + 'cart.js')
       .then((response) => response.json())
       .then((data) => {
+        let inCart = false;
         for (i = 0; i < data.items.length; i++) {
           if (data.items[i].id == variantSelector.value) {
-            console.log(document.querySelector("button[name='add']").innerText);
-            if (document.querySelector("button[name='add']").innerText == 'ADD TO CART') {
-              document.querySelector("button[name='add']").innerText = 'ADDED TO CART';
-            }
+            inCart = true;
           }
+        }
+        if (inCart && document.querySelector("button[name='add']").innerText == 'ADD TO CART') {
+          document.querySelector("button[name='add']").innerText = 'ADDED TO CART';
+        } else if (!inCart && document.querySelector("button[name='add']").innerText == 'ADDED TO CART') {
+          document.querySelector("button[name='add']").innerText = 'ADD TO CART';
         }
       });
     // console.log(cartContents);
